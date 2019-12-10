@@ -35,7 +35,8 @@ export default {
       return axios
         .post("https://api.golike.net:9998/api/job", {
           user: {
-            fb_id: "100004852382242"
+            // fb_id: "100004852382242"
+            fb_id: s.state.fb_id,
           }
         })
         .then(res => {
