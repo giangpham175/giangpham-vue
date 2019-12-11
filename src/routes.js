@@ -8,12 +8,26 @@ export default [
   {
     path: "/login",
     name: "login",
-    component: Login
+    component: Login,
+    beforeEnter(to, from, next) {
+      if (store.state.token === null) {
+        next();
+      } else {
+        next("/member");
+      }
+    }
   },
   {
     path: "/register",
     name: "register",
-    component: Register
+    component: Register,
+    beforeEnter(to, from, next) {
+      if (store.state.token === null) {
+        next();
+      } else {
+        next("/member");
+      }
+    }
   },
   {
     path: "/member",

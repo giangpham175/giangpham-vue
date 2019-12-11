@@ -5,13 +5,15 @@ export default {
     username: null,
     coin: null,
     jobs: null,
-    fb_id: null
+    fb_id: null,
+    token: null
   },
   mutations: {
     login(state, payload) {
       state.username = payload.username;
       state.coin = payload.coin;
       state.fb_id = payload.fb_id;
+      state.token = payload.token;
     },
     logout(state) {
       state.username = null;

@@ -2,6 +2,7 @@
   <div id="app">
     <div class="navbar">
       <router-link to="/">Home</router-link>
+      <router-link to="/member" v-if="$store.state.username">Profile</router-link>
       <router-link to="/register" v-if="$store.state.username === null">Register</router-link>
       <router-link to="/login" v-if="$store.state.username === null">Login</router-link>
       <a v-else @click="logout">Logout</a>
