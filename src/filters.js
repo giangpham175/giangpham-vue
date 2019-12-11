@@ -1,11 +1,11 @@
 export default {
   methods: {
     coinFormat(value) {
-      let val = new Intl.NumberFormat("vi-VI", {
+      let coin = new Intl.NumberFormat("vi-VI", {
         style: "currency",
         currency: "VND"
       }).format(value);
-      return val;
+      return coin;
     }
   }
   // coinFormat: function(value, length) {

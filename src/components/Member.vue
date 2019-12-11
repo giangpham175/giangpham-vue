@@ -3,7 +3,7 @@
     <div v-if="username ">
       username: {{ username }}
       <br />
-      coin: {{ coin | coinFormat(coin) }}
+      coin: {{ coin | coinFormat }}
     </div>
     <ul>
       <li v-for="(job, index) in jobs" :key="index">
